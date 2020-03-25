@@ -1,0 +1,190 @@
+:root {
+    --dark: hsla(243,26%,20%,100%);
+    --light: hsla(243,26%,70%,100%);
+    --accent: hsla(20, 100%, 50%, 100%);
+    --accent2: hsla(109, 100%, 50%, 100%);
+    color: var(--dark);
+    font-family: sans-serif;
+    background: var(--dark) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+body {
+    margin: 0;
+}
+
+#topBar {
+    background: var(--light);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav {
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+}
+
+nav button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--dark);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+nav button:hover {
+    color: var(--accent);
+}
+
+nav button:focus {
+    color: var(--accent);
+}
+
+nav button:active {
+    color: var(--dark);
+}
+
+section, .modal {
+    background: var(--light);
+    padding: 0.01rem 1rem;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.modalbg {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    background: hsla(243,0%,0%,50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.modal {
+    text-align: center;
+    width: 70%;
+    max-width: 400px;
+    padding: 2rem;
+    height: 20rem;
+}
+
+.answer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.key {
+    justify-self: right;
+    align-self: center;
+}
+
+.value {
+    justify-self: left;
+}
+
+.question {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    width: 4.5rem;
+    background: white;
+    border: solid 0.2rem var(--dark);
+    border-radius: 50%;
+}
+
+.emphasis {
+    color: hsla(280, 100%, 40%, 100%);
+    font-weight: 900;
+}
+
+.showans {
+    font-size: 2rem;
+    color: var(--dark);
+    border: solid 0.2rem var(--dark);
+    background: transparent;
+    border-radius: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin-top: 3rem;
+}
+
+.showans:hover, .showans:focus {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.showans:active {
+    background: var(--light);
+    color: var(--dark);
+}
+
+.close {
+    position: relative;
+    top: -2ch;
+    left: -45%;
+    font-size: 1rem;
+    color: var(--dark);
+    font-weight: 700;
+    background: red;
+    border: solid 0.2rem var(--dark);
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 0 0.2rem 0 0.2rem;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: white;
+    border-color: white;
+}
+
+.close:active {
+    color: var(--dark);
+    border-color: var(--dark);
+}
+
+.next {
+    position: relative;
+    top: -2ch;
+    left: 45%;
+    font-size: 1rem;
+    color: var(--dark);
+    font-weight: 700;
+    background: var(--accent2);
+    border: solid 0.2rem var(--dark);
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+.next:hover, .next:focus {
+    color: white;
+    border-color: white;
+}
+
+.next:active {
+    color: var(--dark);
+    border-color: var(--dark);
+}
+
+.hidden {
+    display: none;
+}
+
+.modalcont {
+    background: transparent;
+}

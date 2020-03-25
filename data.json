@@ -1,0 +1,94 @@
+{
+    "ipaChar": [
+        {
+            "ipaChar": "i",
+            "refWord": "free",
+            "refLanguage": "English",
+            "refEmphasis": "ee",
+            "tongue": "front",
+            "jaw": "close",
+            "type": "vowel"
+        },
+        {
+            "ipaChar": "e",
+            "refWord": "may",
+            "refLanguage": "English",
+            "refEmphasis": "ay",
+            "tongue": "front",
+            "jaw": "close-mid",
+            "type": "vowel"
+        },
+        {
+            "ipaChar": "ə",
+            "refWord": "again",
+            "refLanguage": "English",
+            "refEmphasis": "a",
+            "tongue": "central",
+            "jaw": "mid",
+            "type": "vowel"
+        },
+        {
+            "ipaChar": "u",
+            "refWord": "boot",
+            "refLanguage": "English",
+            "refEmphasis": "oo",
+            "tongue": "back",
+            "jaw": "close",
+            "type": "vowel"
+        },
+        {
+            "ipaChar": "o",
+            "refWord": "go",
+            "refLanguage": "English",
+            "refEmphasis": "o",
+            "tongue": "back",
+            "jaw": "close-mid",
+            "type": "vowel"
+        },
+        {
+            "ipaChar": "ɔ",
+            "refWord": "thought",
+            "refLanguage": "English",
+            "refEmphasis": "ough",
+            "tongue": "back",
+            "jaw": "open-mid",
+            "type": "vowel"
+        },
+        {
+            "ipaChar": "ɛ",
+            "refWord": "bed",
+            "refLanguage": "English",
+            "refEmphasis": "e",
+            "tongue": "front",
+            "jaw": "open-mid",
+            "type": "vowel"
+        },
+        {
+            "ipaChar": "æ",
+            "refWord": "cat",
+            "refLanguage": "English",
+            "refEmphasis": "a",
+            "tongue": "front",
+            "jaw": "near-open",
+            "type": "vowel"
+        },
+        {
+            "ipaChar": "ɪ",
+            "refWord": "is",
+            "refLanguage": "English",
+            "refEmphasis": "i",
+            "tongue": "front",
+            "jaw": "near-close",
+            "type": "vowel"
+        },
+        {
+            "ipaChar": "y",
+            "refWord": "über",
+            "refLanguage": "German",
+            "refEmphasis": "ü",
+            "tongue": "front",
+            "jaw": "close",
+            "type": "vowel"
+        }
+    ]
+}
