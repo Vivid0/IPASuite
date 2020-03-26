@@ -7,6 +7,11 @@ function getRandomIndex (arr) {
     return Math.round(Math.random() * (arr.length - 1));
 };
 
+//initialize the modal container
+function modalInit () {
+    modalcont.innerHTML = ``;
+}
+
 //puts emphasis on the sound within the reference word
 function emphasize (wordStr, emphStr) {
     return wordStr.replace(emphStr,`<span class="emphasis">${emphStr}</span>`);
@@ -50,8 +55,10 @@ function lettersModal () {
     `
     <div class="modalbg">
         <div class="modal" role="dialog">
-            <button class="close" type="button" role="button" name="close">x</button>
-            <button class="next" type="button" role="button" name="next">▶︎</button>
+            <div class="controls">
+                <button class="close" type="button" role="button" name="close">x</button>
+                <button class="next" type="button" role="button" name="next">▶︎</button>
+            </div>
             <div class="question">${char}</div>
             <button class="showans" type="button" name="showans">Show Answer</button>
             <div class="answer hidden">
@@ -83,7 +90,7 @@ function lettersModal () {
 
     //Close buton
     const close = document.querySelector(`[name="close"]`);
-    close.addEventListener(`click`, () => {modalcont.innerHTML = ``});
+    close.addEventListener(`click`, () => {modalInit()});
 }
 
 //Letters button
@@ -93,16 +100,18 @@ letters.addEventListener(`click`, () => {
     lettersModal();
 });
 
+//Click outside modal close
+modalcont.addEventListener(`click`, (event) => {
+    const isOutside = !event.target.closest(`.modal`);
+    if(isOutside) {
+        modalInit();
+    };
+});
 
-    //create a modal
-    //create elements or HTML fragment
-    //send request to data.json to retrieve a random index
-    //create a "Show Answer" button on the modal
-    //create a "Next" button on the modal
-
-//Show Answer button
-    //reveal the answer: refLanguage: refWord modified by refEmphasis, tongue, jaw
-//Next button
-    //send request to data.json to retrieve a random index
-//Close button
-    //deletes the modal elements
+//Close with Escape key
+window.addEventListener(`keydown`, (event) => {
+    const key = event.code;
+    if (key === `Escape`) {
+        modalInit();
+    }
+})

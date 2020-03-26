@@ -1,7 +1,7 @@
 :root {
     --dark: hsla(243,26%,20%,100%);
     --light: hsla(243,26%,70%,100%);
-    --accent: hsla(20, 100%, 50%, 100%);
+    --accent: hsla(280, 100%, 40%, 100%);
     --accent2: hsla(109, 100%, 50%, 100%);
     color: var(--dark);
     font-family: sans-serif;
@@ -38,11 +38,12 @@ nav button {
 }
 
 nav button:hover {
-    color: var(--accent);
+    color: white;
 }
 
 nav button:focus {
-    color: var(--accent);
+    color: var(--light);
+    background: var(--dark);
 }
 
 nav button:active {
@@ -71,17 +72,17 @@ section, .modal {
 
 .modal {
     text-align: center;
-    width: 70%;
+    width: 80%;
     max-width: 400px;
     padding: 2rem;
-    height: 20rem;
 }
 
 .answer {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 0.95fr 1.05fr;
     gap: 0.5rem;
-    font-size: 2.5rem;
+    font-size: 220%;
+    margin: 0 -2rem;
 }
 
 .key {
@@ -98,13 +99,14 @@ section, .modal {
     margin-bottom: 2rem;
     font-size: 4rem;
     width: 4.5rem;
+    padding: 0.5rem;
     background: white;
     border: solid 0.2rem var(--dark);
     border-radius: 50%;
 }
 
 .emphasis {
-    color: hsla(280, 100%, 40%, 100%);
+    color: var(--accent);
     font-weight: 900;
 }
 
@@ -129,19 +131,21 @@ section, .modal {
     color: var(--dark);
 }
 
+.controls {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: -7%;
+    margin-left: -7%;
+    margin-right: -7%;
+}
+
 .close {
-    position: relative;
-    top: -2ch;
-    left: -45%;
-    font-size: 1rem;
+    justify-self: start;
+    font-size: 1.5rem;
     color: var(--dark);
     font-weight: 700;
-    background: red;
-    border: solid 0.2rem var(--dark);
-    border-radius: 50%;
-    width: 2.2rem;
-    height: 2.2rem;
-    padding: 0 0.2rem 0 0.2rem;
+    background: transparent;
+    border: none;
     cursor: pointer;
 }
 
@@ -156,29 +160,21 @@ section, .modal {
 }
 
 .next {
-    position: relative;
-    top: -2ch;
-    left: 45%;
-    font-size: 1rem;
+    justify-self: end;
+    font-size: 1.5rem;
     color: var(--dark);
     font-weight: 700;
-    background: var(--accent2);
-    border: solid 0.2rem var(--dark);
-    border-radius: 50%;
-    width: 2.2rem;
-    height: 2.2rem;
-    padding: 0.2rem;
+    background: transparent;
+    border: none;
     cursor: pointer;
 }
 
 .next:hover, .next:focus {
     color: white;
-    border-color: white;
 }
 
 .next:active {
-    color: var(--dark);
-    border-color: var(--dark);
+    color: white;
 }
 
 .hidden {
